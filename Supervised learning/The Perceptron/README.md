@@ -1,1 +1,1 @@
-![perceptron](perceptron.svg) 
+![perceptron](Perceptron.svg) 
