@@ -1,10 +1,10 @@
-# Header 1 Ensemble Learning Methods in Machine Learning
+# Ensemble Learning Methods in Machine Learning
 Ensemble learning is a powerful technique in machine learning where multiple models are combined to improve the overall performance and robustness of the system. This repository provides an overview of ensemble learning methods and their implementation using Python and scikit-learn.
 
-# Header 2 Introduction
+## Introduction
 Ensemble learning leverages the "wisdom of the crowd" principle, where combining multiple weak learners can often yield a stronger learner. It helps reduce overfitting, improve generalization, and enhance prediction accuracy compared to individual models.
 
-# Header 2 Algorithms
+## Algorithms
 1. Bagging (Bootstrap Aggregating)
 Bagging involves training multiple base models independently on random subsets of the training data (with replacement) and then aggregating their predictions, usually by averaging for regression or voting for classification. Bagging helps reduce variance and improve stability.
 
