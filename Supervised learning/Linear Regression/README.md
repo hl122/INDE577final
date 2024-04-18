@@ -9,81 +9,69 @@ Linear regression is a simple yet powerful algorithm used for predicting continu
 
 ## Mathematical Formulation
 
-Assume we have an input data set (column vector) $$\textbf{X} = (\textbf{x}_1^T, \textbf{x}_2^T, \cdots, \textbf{x}_n^T)$$, where $$\textbf{x}_i^T = (x_{i1}, x_{i2}, \cdots, x_{ip}) \in \textbf{R}^p$$, and want to predict a real-valued output data set (column vector) $$\textbf{y} = (y_1, y_2, \cdots, y_n)$$. The linear regression model has the form
+### Simple Linear Regression
 
-$$
-y_i = \beta_0 + \sum_{j=1}^{p} {\beta_j x_{ij}} + \epsilon_i 
-$$
+In simple linear regression, we have one independent variable X and one dependent variable y. 
+The relationship between X and y is modeled using a straight line equation:
 
-Here the $$\beta_j’s$$ are unknown parameters or coefficients of corresponding input.
+$$ y = mx + b $$
 
-To simplify the equation, usually a column of $$1$$'s are added to the input data matrix, where $$\textbf{x}_i^T = (1, x_{i1}, x_{i2}, \cdots, x_{ip})$$, and the linear equation becomes
+where:
+$$ m $$ is the slope of the line, representing the change in y for a unit change in $$ X $$.
+$$ b $$ is the y-intercept, the value of y when X is zero.
 
-$$
-y_i = \textbf{x}_i^T \boldsymbol{\beta} + \epsilon_i
-$$
+### Multiple Linear Regression
 
-Often these $$n$$ equations are stacked together and written in a matrix form
+In multiple linear regression, we extend the concept to multiple independent variables $$X_1, X_2, ..., X_n$$ influencing the dependent variable $$ y $$. The relationship is modeled as:
 
-$$
-\textbf{y} = \textbf{X} \boldsymbol{\beta} + \epsilon
-$$
+$$ y = b_0 + b_1X_1 + b_2X_2 + ... + b_nX_n $$
 
-The linear model either assumes that the regression function $$E(Y|X)$$ is linear, or that the linear model is a reasonable approximation. 
+where:
+$$ b_0 $$ is the intercept term.
+$$ b_1, b_2, ..., b_n $$ are the coefficients of the independent variables.
 
-The most popular estimation method is least squares, in which we pick the coefficients $$\boldsymbol{\beta} = (\beta_0, \beta_1, . . ., \beta_p)^T$$, which minimizes the residual sum of squares
+## Algorithm: Ordinary Least Squares (OLS)
 
-$$
-RSS(\boldsymbol{\beta}) = \sum_{i=1}^n {\epsilon_i^2} =\sum_{i=1}^n (y_i - \beta_0 - \sum_{j=1}^{p} {\beta_j x_{ij}})^2
-$$
+The Ordinary Least Squares method is a common approach for estimating the parameters of a linear regression model. It minimizes the sum of the squared differences between the observed and predicted values of $$ y $$.
 
-This criterion makes sense if the observations $$(\textbf{x}_i, y_i)$$ are independent and identically distributed (iid), which means that they are and randomly drawn from the population.
+### Cost Function
 
-To minimize $$RSS(\boldsymbol{\beta})$$, first we make the following assumptions:
-* $$E[\epsilon_i]=0$$, i.e., $$E[y_i]=\textbf{x}_i^T \boldsymbol{\beta}$$
-* $$Var[\epsilon_i] = \sigma^2 < \infty$$ (homoscedasticity)
-* $$Cov[\epsilon_i, \epsilon_j]=0$$ for $$\forall i \neq j$$, i.e., $$\epsilon_i, \epsilon_j$$ are uncorrelated,
-and $$\epsilon_i$$ do not depend on $$x_i$$ .
+The cost function, also known as the loss function, measures the difference between the predicted values ( \hat{y}) and the actual values (y):
 
+$$ J(b) = \frac{1}{2m} \sum_{i=1}^{m} (\hat{y}_i - y_i)^2 $$
 
+where:
+$$ m $$ is the number of training examples.
+$$ \hat{y}_i $$ is the predicted value for the $$ i $$th example.
+$$ y_i $$ is the actual value for the $$ i $$th example.
 
-Rewrite it to matrix form
-$$
-RSS(\boldsymbol{\beta}) = (\textbf{y}-\textbf{X}\boldsymbol{\beta})^T (\textbf{y}-\textbf{X}\boldsymbol{\beta})
-$$
+### Minimization
 
-Notice that it's a quadratic function with $$p+1$$ paraeters, take the partial derivative w.r.t $$\boldsymbol{\beta}$$, we have
+The goal is to find the values of the coefficients \b_0, b_1, ..., b_n that minimize the cost function J(b). This is typically achieved using optimization techniques like gradient descent.
 
-$$
-\frac{\partial RSS} {\partial \boldsymbol{\beta}} = -2 \textbf{X}^T (\textbf{y}-\textbf{X}\boldsymbol{\beta})
-$$
+### Gradient Descent
 
-$$
-\frac{\partial^2 RSS} {\partial \boldsymbol{\beta} \partial \boldsymbol{\beta}^T} = -2 \textbf{X}^T \textbf{X}
-$$
+Gradient descent is an iterative optimization algorithm used to find the minimum of a function. In the context of linear regression, it updates the coefficients in the direction of the steepest descent of the cost function.
 
-Assume that $$\textbf{X}$$ is fully ranked, i.e., $$n>p$$, then $$\textbf{X}^T \textbf{X}$$ is positive definite. Set the first partial derivative to $$0$$, we have
-$$
-\textbf{X}^T (\textbf{y}-\textbf{X}\boldsymbol{\beta}) = \textbf{0}
-$$
+$$ b_j := b_j - \alpha \frac{\partial}{\partial b_j} J(b) $$
 
-And the solution is 
-$$
-\hat{\boldsymbol{\beta}} = (\textbf{X}^T \textbf{X})^{-1} \textbf{X}^T \textbf{y}
-$$
+where:
+$$ \alpha $$ is the learning rate, controlling the size of the steps taken during optimization.
+$$ \frac{\partial}{\partial b_j} J(b) $$ is the partial derivative of the cost function with respect to the $$ j $$th coefficient.
 
-Note that only when $$\textbf{X}$$ is fully ranked does the inverse of $$\textbf{X}^T \textbf{X}$$ exist.
+### Closed-Form Solution
 
-Thus the fitted values of the training inputs are given by
+In simple linear regression, a closed-form solution exists for finding the optimal coefficients using matrix operations:
 
-$$
-\hat{\textbf{y}} = \textbf{X} \hat{\boldsymbol{\beta}} = \textbf{X} (\textbf{X}^T \textbf{X})^{-1} \textbf{X}^T \textbf{y}
-$$
+$$ b = (X^T X)^{-1} X^T y $$
 
-To make a prediction given an unobserved input vector $$\textbf{x}_0$$
+where:
+$$ X $$ is the design matrix containing the independent variables.
+$$ y $$ is the vector of dependent variables.
 
-$$
-\hat{y} = (1, \text
+## Conclusion
+
+Linear regression is a simple yet powerful algorithm for modeling the relationship between variables. By understanding the mathematical formulation and algorithm behind linear regression, we can effectively estimate the parameters of the model and make predictions on new data.
 
 
 
