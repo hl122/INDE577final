@@ -17,8 +17,8 @@ The relationship between X and y is modeled using a straight line equation:
 $$ y = mx + b $$
 
 where:
--$m$ is the slope of the line, representing the change in y for a unit change in X.
--$b$ is the y-intercept, the value of y when X is zero.
+$m$ is the slope of the line, representing the change in y for a unit change in X.
+$b$ is the y-intercept, the value of y when X is zero.
 
 ### Multiple Linear Regression
 
@@ -27,8 +27,8 @@ In multiple linear regression, we extend the concept to multiple independent var
 $$ y = b_0 + b_1X_1 + b_2X_2 + ... + b_nX_n $$
 
 where:
-$b_0 $ is the intercept term.
-$ b_1, b_2, ..., b_n $ are the coefficients of the independent variables.
+$b_0$ is the intercept term.
+$b_1, b_2, ..., b_n$ are the coefficients of the independent variables.
 
 ## Algorithm: Ordinary Least Squares (OLS)
 
