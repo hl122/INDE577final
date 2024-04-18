@@ -22,7 +22,7 @@ $b$ is the y-intercept, the value of y when X is zero.
 
 ### Multiple Linear Regression
 
-In multiple linear regression, we extend the concept to multiple independent variables $$X_1, X_2, ..., X_n$$ influencing the dependent variable y. The relationship is modeled as:
+In multiple linear regression, we extend the concept to multiple independent variables $X_1, X_2, ..., X_n$ influencing the dependent variable y. The relationship is modeled as:
 
 $$ y = b_0 + b_1X_1 + b_2X_2 + ... + b_nX_n $$
 
@@ -32,7 +32,7 @@ $b_1, b_2, ..., b_n$ are the coefficients of the independent variables.
 
 ## Algorithm: Ordinary Least Squares (OLS)
 
-The Ordinary Least Squares method is a common approach for estimating the parameters of a linear regression model. It minimizes the sum of the squared differences between the observed and predicted values of $$ y $$.
+The Ordinary Least Squares method is a common approach for estimating the parameters of a linear regression model. It minimizes the sum of the squared differences between the observed and predicted values of $y$.
 
 ### Cost Function
 
@@ -47,7 +47,7 @@ $y_i$ is the actual value for the $$ i $$th example.
 
 ### Minimization
 
-The goal is to find the values of the coefficients \b_0, b_1, ..., b_n that minimize the cost function J(b). This is typically achieved using optimization techniques like gradient descent.
+The goal is to find the values of the coefficients $\b_0, b_1, ..., b_n$ that minimize the cost function J(b). This is typically achieved using optimization techniques like gradient descent.
 
 ### Gradient Descent
 
@@ -56,8 +56,8 @@ Gradient descent is an iterative optimization algorithm used to find the minimum
 $$ b_j := b_j - \alpha \frac{\partial}{\partial b_j} J(b) $$
 
 where:
-$ \alpha $ is the learning rate, controlling the size of the steps taken during optimization.
-$$ \frac{\partial}{\partial b_j} J(b) $$ is the partial derivative of the cost function with respect to the $ j$th coefficient.
+$\alpha$ is the learning rate, controlling the size of the steps taken during optimization.
+$$ \frac{\partial}{\partial b_j} J(b) $$ is the partial derivative of the cost function with respect to the $j$ th coefficient.
 
 ### Closed-Form Solution
 
