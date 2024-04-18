@@ -36,7 +36,7 @@ The Ordinary Least Squares method is a common approach for estimating the parame
 
 ### Cost Function
 
-The cost function, also known as the loss function, measures the difference between the predicted values ( \hat{y}) and the actual values (y):
+The cost function, also known as the loss function, measures the difference between the predicted values ( $\hat{y}$) and the actual values (y):
 
 $$ J(b) = \frac{1}{2m} \sum_{i=1}^{m} (\hat{y}_i - y_i)^2 $$
 
@@ -47,7 +47,7 @@ $y_i$ is the actual value for the $$ i $$th example.
 
 ### Minimization
 
-The goal is to find the values of the coefficients $\b_0, b_1, ..., b_n$ that minimize the cost function J(b). This is typically achieved using optimization techniques like gradient descent.
+The goal is to find the values of the coefficients $b_0, b_1, ..., b_n$ that minimize the cost function J(b). This is typically achieved using optimization techniques like gradient descent.
 
 ### Gradient Descent
 
@@ -57,7 +57,7 @@ $$ b_j := b_j - \alpha \frac{\partial}{\partial b_j} J(b) $$
 
 where:
 $\alpha$ is the learning rate, controlling the size of the steps taken during optimization.
-$$ \frac{\partial}{\partial b_j} J(b) $$ is the partial derivative of the cost function with respect to the $j$ th coefficient.
+$\frac{\partial}{\partial b_j} J(b)$ is the partial derivative of the cost function with respect to the $j$ th coefficient.
 
 ### Closed-Form Solution
 
