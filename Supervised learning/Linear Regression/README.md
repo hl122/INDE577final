@@ -69,6 +69,34 @@ where:
 $X$ is the design matrix containing the independent variables.
 $y$ is the vector of dependent variables.
 
+## Advantages and Disadvantages of Linear Regression
+
+### Advantages:
+
+1. **Interpretability**: Linear regression provides coefficients that represent the relationship between independent and dependent variables. This makes it easy to interpret the impact of each predictor on the outcome.
+
+2. **Simple and Fast**: Linear regression is computationally efficient and easy to implement. It's well-suited for situations where the relationship between variables is approximately linear.
+
+3. **Best Linear Unbiased Estimator (BLUE)**: Under certain assumptions, the least squares estimates produced by linear regression are unbiased and have minimum variance among all linear estimators. This property is known as BLUE.
+
+4. **Well-understood**: Linear regression is a well-studied statistical method with a clear theoretical foundation. It's widely taught and understood, making it accessible to practitioners.
+
+5. **Regularization**: Linear regression can be extended with regularization techniques like Ridge and Lasso regression to handle multicollinearity and prevent overfitting.
+
+### Disadvantages:
+
+1. **Assumption of Linearity**: Linear regression assumes a linear relationship between independent and dependent variables. In real-world scenarios, this assumption may not hold, leading to inaccurate predictions.
+
+2. **Assumption of Independence**: Linear regression assumes that the residuals (errors) are independent of each other. Violation of this assumption can lead to biased estimates and inaccurate predictions.
+
+3. **Sensitivity to Outliers**: Linear regression is sensitive to outliers, as it tries to minimize the squared errors. Outliers can disproportionately influence the estimated coefficients and affect the overall model performance.
+
+4. **Limited Complexity**: Linear regression can only capture linear relationships between variables. It may not be suitable for capturing complex non-linear relationships present in the data.
+
+5. **Multicollinearity**: Linear regression assumes that the independent variables are not highly correlated with each other (multicollinearity). When multicollinearity is present, it can be challenging to interpret the coefficients and lead to unstable estimates.
+
+
+
 ## Conclusion
 
 Linear regression is a simple yet powerful algorithm for modeling the relationship between variables. By understanding the mathematical formulation and algorithm behind linear regression, we can effectively estimate the parameters of the model and make predictions on new data.
