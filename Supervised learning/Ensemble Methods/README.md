@@ -63,3 +63,7 @@ Tends to yield higher accuracy than individual models.
 More complex to implement compared to other ensemble methods.
 Requires a separate validation set for meta-learner training.
 May overfit if the number of base models is too large relative to the size of the dataset.
+
+
+![Ensemble](Ensemble image.png) 
+source: https://www.v7labs.com/blog/ensemble-learning
