@@ -77,10 +77,14 @@ Linear regression is a simple yet powerful algorithm for modeling the relationsh
 
 
 ## Applications
-Economics: Predicting sales based on advertising expenditure.
-Finance: Predicting stock prices based on market indicators.
-Healthcare: Predicting patient outcomes based on clinical variables.
-Engineering: Predicting energy consumption based on environmental factors.
+### Economics: 
+Predicting sales based on advertising expenditure.
+### Finance: 
+Predicting stock prices based on market indicators.
+### Healthcare: 
+Predicting patient outcomes based on clinical variables.
+### Engineering: 
+Predicting energy consumption based on environmental factors.
 
-![Ensemble](https://upload.wikimedia.org/wikipedia/commons/b/b5/Ensemble_Boosting.svg) 
+![Linear Regression](https://en.wikipedia.org/wiki/Linear_regression#/media/File:Linear_least_squares_example2.svg) 
 image from wikipedia 
