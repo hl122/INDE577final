@@ -65,5 +65,5 @@ Requires a separate validation set for meta-learner training.
 May overfit if the number of base models is too large relative to the size of the dataset.
 
 
-![Ensemble](Ensemble image.png) 
-source: https://www.v7labs.com/blog/ensemble-learning
+![Ensemble](https://upload.wikimedia.org/wikipedia/commons/b/b5/Ensemble_Boosting.svg) 
+\n image from wikipedia
