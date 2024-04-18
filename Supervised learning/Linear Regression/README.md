@@ -42,8 +42,8 @@ $$ J(b) = \frac{1}{2m} \sum_{i=1}^{m} (\hat{y}_i - y_i)^2 $$
 
 where:
 $m$ is the number of training examples.
-$$ \hat{y}_i $$ is the predicted value for the $$ i $$th example.
-$y_i$ is the actual value for the $$ i $$th example.
+$\hat{y}_i$ is the predicted value for the $i$th example.
+$y_i$ is the actual value for the $i$th example.
 
 ### Minimization
 
