@@ -114,5 +114,5 @@ Predicting patient outcomes based on clinical variables.
 ### Engineering: 
 Predicting energy consumption based on environmental factors.
 
-![Linear Regression](https://en.wikipedia.org/wiki/Linear_regression#/media/File:Linear_least_squares_example2.svg) 
+![Linear Regression](https://upload.wikimedia.org/wikipedia/commons/b/b0/Linear_least_squares_example2.svg) 
 image from wikipedia 

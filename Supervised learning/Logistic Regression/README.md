@@ -63,5 +63,5 @@ The objective is to minimize a loss function, such as the cross-entropy loss, wh
 2. **Credit Scoring**: It is used in the banking and finance industry for assessing credit risk and determining loan approvals.
 3. **Marketing Analytics**: Logistic regression is employed in marketing analytics for predicting customer churn and targeting marketing campaigns.
 
-![Logistic Regression](https://en.wikipedia.org/wiki/Logistic_regression#/media/File:Exam_pass_logistic_curve.svg) 
+![Logistic Regression](https://upload.wikimedia.org/wikipedia/commons/c/cb/Exam_pass_logistic_curve.svg) 
 image from wikipedia
