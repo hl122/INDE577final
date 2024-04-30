@@ -1,6 +1,6 @@
 # INDE577final
 
-## INDE577 @ Rice University Fall 2024
+## INDE577 @ Rice University Spring 2024
 ---
 
 ### By Hannah Lim https://github.com/hl122/INDE577final
