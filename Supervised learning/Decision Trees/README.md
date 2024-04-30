@@ -7,10 +7,6 @@ Inside "Decision_Trees.ipynb," you'll find detailed explanations and coding exam
 
 # Introduction to Decision Trees and Their Theoretical Foundation
 
-![Decsion tree cartoon](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*xmZis4W43nLXwDJLwOCRcA.png)
-
-Image from Gaurav Parihar
-
 Decision trees are a fundamental machine learning technique used for both classification and regression tasks. In this section, we provide an overview of decision trees, exploring their definition, conceptual understanding, and historical development. We delve into their wide-ranging applications, from solving classification problems to addressing regression challenges. Additionally, we discuss the theoretical underpinnings of decision trees, including their inherent bias-variance tradeoff.
 
 ## Overview of Decision Trees
@@ -24,10 +20,6 @@ This section delves into the fundamental principles underlying decision tree con
 ## Decision Tree Structure
 
 Understanding the structure of decision trees is pivotal for comprehending their functionality and interpretability. We examine the components of decision trees, including nodes, branches, and leaves, and discuss their hierarchical representation of decision rules. By understanding decision tree structure, practitioners can gain deeper insights into how decisions are made within the model.
-
-![Structure of Decision Tree](http://www.techinfoplace.com/Content/assets/DataScienceBrochuresContent/images/decisionTreeModeling/DecisionTree.png)
-
-Image from TECHINFOPLACE
 
 
 ### Decision Nodes

@@ -1,1 +1,0 @@
-https://en.wikipedia.org/wiki/Perceptron#/media/File:Perceptron.svg
